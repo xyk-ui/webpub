@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>落水救援设备</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/index.js" defer></script>
+    <style>
+        body {
+            background: url('../4D4014106DD20BF66550518536B6C454.png') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="indexMain">
+        <div class="indexBox">
+            落 水 救 援 设 备 柜 门 控 制
+        </div>
+        <div class="indexContent">
+            <div>
+                <img src="../d5a5e944daa4ab47278199d5a88225f.png" alt="Description" class="fillBoxImage">
+            </div>
+        </div>
+        <input type="checkbox" id="display">
+        <label for="display" class="display-btn">有人落水，实施救援</label>
+
+        <div class="container">
+            <label for="display" class="close-btn" title="close">x</label>
+            <div class="warning-text">
+                &nbsp&nbsp本设备为紧急救生专用，不得随意破坏，否则将追究法律责任！<br />（点击确认键后进入拍照留存界面）
+            </div>
+            <div class="warning-image">
+                <p>&#8212;&#8212;&#47;&#47; &#8212;&#8212;&#8212; 请在使用前认真阅读以上说明 &#8212;&#8212;&#8212;&#47;&#47;&#8212;&#8212;</p>
+            </div>
+            <div class="Button">
+                <button id="ConfirmBtn" >确 认</button>
+                <div class="Cancel"><a href="./index.html">&#8592;</a></div>
+                <div class="Back"><a href="./index.html">点击返回</a></div>
+            </div>
+
+        </div>
+
+
+    </nav>
+
+    <script>
+        document.getElementById('ConfirmBtn').addEventListener('click', function() {
+            fetch('http://192.168.0.180:5000/take_picture', {
+                method: 'POST',
+            })
+            .then(response => response.text())
+            .then(data => {
+                console.log(data);
+                alert('拍照指令已发送');
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('发送指令失败');
+            });
+        });
+    </script>
+
+
+
+
+</body>
+
+</html>
