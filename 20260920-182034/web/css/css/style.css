@@ -1,0 +1,69 @@
+@import url('./index.css');
+
+@import url('../index.html/css/login.css');
+
+
+body{
+    background: url('../d5a5e944daa4ab47278199d5a88225f.pn');
+    background-size: cover;
+    background-attachment: fixed;/* 固定背景图片，使其不随页面滚动而移动 */
+    transition:   background-image 0.5s ease-in-out;/* 添加过渡效果，使背景图片在0.5秒内平滑过渡 */
+    margin: 0;
+}
+
+
+/* 定义弹簧缩小动画 */
+@keyframes bounce {
+    40% {transform: scale(0.9);}
+    60% {transform: scale(0.95);}
+    80% {transform: scale(0.98);}
+}
+
+.display-btn {
+  /* 其他样式 */
+    display: inline-block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.display-btn:active {
+    transform: scale(0.95);
+}
+
+
+/* 定义动画类 */
+.display-btn {
+  /* 其他样式 */
+    display: inline-block;
+    cursor: pointer;
+    animation: bounce 0.75s ease infinite;
+}
+
+
+
+
+body {
+    background-image: url('./');
+    background-size: cover;
+    background-attachment: fixed;
+    /* 固定背景图片，使其不随页面滚动而移动 */
+    transition: background-image 0.5s ease-in-out;
+    /* 添加过渡效果，使背景图片在0.5秒内平滑过渡 */
+    margin: 0;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: scale(1);}
+    40% {transform: scale(0.8);}
+    60% {transform: scale(0.9);}
+    80% {transform: scale(0.95);}
+        }
+
+        .Button a {
+          display: inline-block; /* 确保元素是行内块级元素，以便应用transform */
+          transition: transform 0.3s ease; /* 添加过渡效果 */
+        }
+
+        .Button a:active {
+          animation: bounce 0.5s ease; /* 应用动画 */
+        }
