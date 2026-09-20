@@ -1,0 +1,190 @@
+.indexMain {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.indexBox {
+    width: 80%;
+    height: 20%;
+    display: flex;
+    position: absolute;
+    top: 3%;
+    justify-content: center;
+    align-items: center;
+    color: hsla(148, 62%, 4%, 0.963);
+    font-size: clamp(1rem, 6vw, 10rem);
+}
+
+.indexContent {
+    width: 40%;
+    height: 50%;
+    display: flex;
+    position: absolute;
+    top: 26%;
+}
+
+
+
+.fillBoxImage {
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.display-btn {
+    background-color: rgba(255, 161, 10, 0.985);
+    width: 30%;
+    height: 9.5%;
+    display: flex;
+    position: absolute;
+    top: 82%;
+    border-radius: 25px;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.1rem, 3vw, 10rem);
+    text-decoration: none;
+    display: inline-block;
+    /* 确保label是行内块级元素，这样宽度可以由内容决定 */
+    text-align: center;
+    /* 使文本水平居中 */
+}
+
+.container {
+    display: none;
+    /* 默认隐藏 */
+}
+
+#display:checked~.container {
+    display: block;
+}
+
+.container {
+    display: none;
+    /* 默认隐藏 */
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(98, 206, 245);
+    width: 50%;
+    height: 70%;
+    position: absolute;
+    border-radius: 15px;
+    border-radius: 15px;
+}
+
+
+.close-btn {
+    display: flex;
+    position: absolute;
+    top: 0%;
+    right: 3%;
+    /* 将元素定位到包含块的右侧边缘 */
+    font-size: clamp(0.1rem, 2.5vw, 10rem);
+}
+
+.warning-text {
+    display: flex;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    right: 5%;
+    color: red;
+    font-size: clamp(0.1rem, 2.8vw, 10rem);
+    font-weight: bold;
+}
+
+.warning-image {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    position: absolute;
+    top: 90%;
+    width: 100%;
+    height: 6%;
+}
+
+.warning-image p {
+    color: white;
+    /* 设置文本颜色为白色 */
+    font-size: clamp(0.1rem, 0.9vw, 10rem);
+    margin: 0;
+    /* 移除外边距 */
+}
+
+.Button {
+    display: flex;
+    position: absolute;
+    top: 70%;
+    width: 100%;
+    height: 10%;
+}
+
+#ConfirmBtn {
+    background-color: rgba(10, 255, 30, 0.985);
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    position: absolute;
+    top: 0%;
+    right: 10%;
+    border: none;
+    /* 移除边框 */
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(0.1rem, 2vw, 10rem);
+    /* 设置字体大小 */
+    color: white;
+    /* 设置文本颜色为白色 */
+    font-weight: bold;
+    /* 将字体加粗 */
+}
+
+.Cancel {
+    width: 6%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    position: absolute;
+    top: 0%;
+    left: 8.5%;
+    font-size: clamp(0.1rem, 3vw, 10rem);
+}
+
+.Cancel a {
+    text-decoration: none; /* 移除下划线 */
+    color: white; /* 设置文本颜色为白色 */
+    font-weight: bold; /* 将字体加粗 */
+}
+
+.Back {
+    display: flex;
+    justify-content: center;
+    /* 水平居中 */
+    align-items: center;
+    /* 垂直居中 */
+    width: 15%;
+    height: 40%;
+    left: 4%;
+    position: absolute;
+    top: 65%;
+}
+
+.Back a {
+    color: white; /* 设置文本颜色为白色 */
+    text-decoration: none; /* 移除下划线 */
+    font-size: clamp(0.1rem, 1.3vw, 10rem);
+}
